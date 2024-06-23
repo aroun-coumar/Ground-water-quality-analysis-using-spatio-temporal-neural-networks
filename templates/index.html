@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+   <head>
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/stylesheet.css') }}">
+      <!--for bg image in html file-->
+      <!--background-image:url({{ url_for('static', filename='img/img1.jpg') }});-->
+      <title>Water Quality</title>
+   </head>
+   <body>
+         <div class="name">
+            Water Quality
+         </div>
+         <div class="context">
+            {% if result %}
+               Given water sample is {{ result }}
+            {% else %}
+               "Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions."
+            {% endif %}
+         </div>
+         <div class="project">
+            <form method="post" action="/" enctype = "multipart/form-data">
+               <h1 > Potability Checker</h1>
+               <!-- <input type="text" name="ph value" id="ph value" placeholder="ph value(0 to 14)" required>
+               <input type="text" name="Hardness" id="Hardness" placeholder="Hardness(mg/L)" required>
+               <input type="text" name="Solids" id="Solids" placeholder="Solids(ppm)" required>
+               <input type="text" name="Chloramines" id="Chloramines" placeholder="Chloramines(ppm)" required>
+               <input type="text" name="Sulfate" id="Sulfate" placeholder="Sulfate(mg/L)" required>
+               <input type="text" name="Conductivity" id="Conductivity" placeholder="Conductivity(uS/cm)" required>
+               <input type="text" name="Organic carbon" id="Organic carbon" placeholder="Organic carbon(ppm)" required>
+               <input type="text" name="Trihalomethanes" id="Trihalomethanes" placeholder="Trihalomethanes(ug/L)" required>
+               <input type="text" name="Turbidity" id="Turbidity" placeholder="Turbidity(NTU)" required> -->
+               <input type="text" name="Latitude" id="Latitude" placeholder="Latitude" required>
+               <input type="text" name="Longitude" id="Longitude" placeholder="Longitude" required>
+               <input type="text" name="Year" id="Year" placeholder="Year" required>
+               <input type="text" name="pH" id="pH" placeholder="pH value (0 to 14)" required>
+               <input type="text" name="EC in μS/cm" id="EC in μS/cm" placeholder="EC in μS/cm" required>
+               <input type="text" name="CO3" id="CO3" placeholder="CO3" required>
+               <input type="text" name="HCO3" id="HCO3" placeholder="HCO3" required>
+               <input type="text" name="Cl" id="Cl" placeholder="Cl" required>
+               <input type="text" name="SO4" id="SO4" placeholder="SO4" required>
+               <input type="text" name="NO3" id="NO3" placeholder="NO3" required>
+               <input type="text" name="PO4" id="PO4" placeholder="PO4" required>
+               <input type="text" name="TH" id="TH" placeholder="TH" required>
+               <input type="text" name="Ca" id="Ca" placeholder="Ca" required>
+               <input type="text" name="Mg" id="Mg" placeholder="Mg" required>
+               <input type="text" name="Na" id="Na" placeholder="Na" required>
+               <input type="text" name="K" id="K" placeholder="K" required>
+               <input type="text" name="F" id="F" placeholder="F" required>
+               <input type="text" name="TDS" id="TDS" placeholder="TDS" required>
+               <center><input class="btn" type=submit name="submit_button" value=PREDICT></center>
+            </form>
+         </div>
+   </body>
+</html>
