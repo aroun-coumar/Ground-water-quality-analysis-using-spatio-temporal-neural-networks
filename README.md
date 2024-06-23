@@ -10,7 +10,8 @@ Access to safe drinking-water is essential to health, a basic human right and a 
 
 ## Architecture
 <p align="center">
-<img src="https://github.com/Tejas2512/WaterQuality/blob/6785bcefb50cee80ccdb67f347772735dd63846c/images/flowchart.png">
+![image](https://github.com/aroun-coumar/Ground-water-quality-analysis-using-spatio-temporal-neural-networks/assets/76672990/d6638279-6cc6-47b0-ab12-cbe6dc5cc937)
+
 </p>
 
 ## About Data
